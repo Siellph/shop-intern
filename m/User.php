@@ -44,6 +44,39 @@ class User extends SQL {
             return 'Пользователь с таким логином не зарегистрирован!';
         }
     }
+
+    public function showAllAdmin() {
+
+        return parent::Select('users', 'id_role', '2', 'true');
+
+    }
+
+    public function saveAdmin($login, $password, $firstname, $lastname, $midname, $date_of_birth, $sex, $phone, $e_mail, $id_role)
+    {
+
+        $object = [
+            'login' => strip_tags($login),
+            'password' => (strip_tags(md5($password))),
+            'firstname' => strip_tags($firstname),
+            'lastname' => strip_tags($lastname),
+            'midname' => strip_tags($midname),
+            'date_of_birth' => strip_tags($date_of_birth),
+            'sex' => strip_tags($sex),
+            'phone' => strip_tags($phone),
+            'e-mail' => strip_tags($e_mail),
+            'id_role' => $id_role,
+        ];
+
+        parent::Insert('users', $object);
+
+        header('Location: index.php?c=page&act=catalog');
+    }
+
+    public function deleteAdmin($id_user) {
+        return parent::Delete('users', 'id_user', $id_user);
+
+    }
+
 // Функция выхода из системы
     public function logout() {
 

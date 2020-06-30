@@ -11,6 +11,39 @@ class C_User extends C_Base {
         $this->content = $this->Template('v/v_info.php', array('username' => $user_info['firstname'], 'userlogin' => $user_info['login']));
     }
 
+    public function action_allAdmin() {
+
+        $admin_object = new User();
+        $admin = $admin_object->showAllAdmin();
+
+        $this->title .= ' | Администраторы';
+        $this->content = $this->Template('v/v_allAdmin.php', array('admin' => $admin));
+
+    }
+
+    public function action_addAdmin() {
+
+        $this->title .= ' | Новый администратор';
+        $this->content = $this->Template('v/v_addAdmin.php');
+
+    }
+
+    public function action_save() {
+
+        $this->IsPost();
+        $admin = new User();
+        $admin->saveAdmin($_POST['login'], $_POST['password'], $_POST['firstname'], $_POST['lastname'], $_POST['midname'], $_POST['date_of_birth'], $_POST['sex'], $_POST['phone'], $_POST['e-mail'], $_POST['id_role']);
+
+
+    }
+
+    public function action_delete($id_user) {
+        $admin_object = new User();
+        $delete = $admin_object->deleteAdmin($id_user);
+
+        header('Location: index.php?c=user&act=allAdmin');
+    }
+
     public function action_reg() {
 
         $this->title .= ' | Регистрация';
