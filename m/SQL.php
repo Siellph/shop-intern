@@ -133,7 +133,7 @@ class SQL {
         return $this->db->lastInsertId();
     }
 
-    public function Update($table, $object, $where_key, $id_product) {
+    public function Update($table, $object, $where_key, $id) {
 
         $sets = array();
 
@@ -147,7 +147,7 @@ class SQL {
         }
 
         $sets_s = implode(' , ',$sets);
-        $query = "UPDATE " . $table . " SET " . $sets_s . " WHERE " . $where_key . " = '" . $id_product ."'";
+        $query = "UPDATE " . $table . " SET " . $sets_s . " WHERE " . $where_key . " = '" . $id ."'";
 
         $q = $this->db->prepare($query);
         $q->execute($object);

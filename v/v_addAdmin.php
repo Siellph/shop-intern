@@ -1,5 +1,5 @@
 
-<form action="index.php?c=user&act=save" method="post" id="form">
+<form action="index.php?c=user&act=addAdmin" method="post" id="form">
     <div class="form-row ml-3 mr-3">
 
         <div class="col-md-6">

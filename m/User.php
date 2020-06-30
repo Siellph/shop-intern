@@ -69,10 +69,28 @@ class User extends SQL {
 
         parent::Insert('users', $object);
 
-        header('Location: index.php?c=page&act=catalog');
+    }
+
+    public function changePass($lastPassword, $newPassword) {
+
+        $pass = parent::Select('users', 'id_user', $_SESSION['id_user']);
+
+        if (strip_tags(md5($lastPassword)) == $pass['password']) {
+
+        $object = [
+            'password' => (strip_tags(md5($newPassword))),
+        ];
+
+        parent::Update('users', $object, 'id_user', $_SESSION['id_user']);
+            return 'Пароль успешно изменен';
+        } else {
+            return 'Старый пароль неверный!';
+        }
+
     }
 
     public function deleteAdmin($id_user) {
+
         return parent::Delete('users', 'id_user', $id_user);
 
     }

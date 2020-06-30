@@ -20,16 +20,16 @@
         foreach ($admin as $user) {
             ?>
             <tr>
-                <th scope="row"><?= $user['id_user'] ?></th>
-                <td><?= $user['login'] ?></td>
-                <td><?= $user['firstname'] ?></td>
-                <td><?= $user['lastname'] ?></td>
-                <td><?= $user['midname'] ?></td>
-                <td><?= $user['date_of_birth'] ?></td>
-                <td><?= $user['sex'] ?></td>
-                <td><?= $user['phone'] ?></td>
-                <td><?= $user['e-mail'] ?></td>
-                <td><a class="btn btn-danger mt-2" href="index.php?c=user&act=delete&id=<?= $user["id_user"] ?>">Удалить</a></td>
+                <th scope="row" class="align-middle"><?= $user['id_user'] ?></th>
+                <td class="align-middle"><?= $user['login'] ?></td>
+                <td class="align-middle"><?= $user['firstname'] ?></td>
+                <td class="align-middle"><?= $user['lastname'] ?></td>
+                <td class="align-middle"><?= $user['midname'] ?></td>
+                <td class="align-middle"><?= $user['date_of_birth'] ?></td>
+                <td class="align-middle"><?= $user['sex'] ?></td>
+                <td class="align-middle"><?= $user['phone'] ?></td>
+                <td class="align-middle"><?= $user['e-mail'] ?></td>
+                <td class="align-middle"><a class="btn btn-danger" href="index.php?c=user&act=delete&id=<?= $user["id_user"] ?>">Удалить</a></td>
             </tr>
             <?php
         }
