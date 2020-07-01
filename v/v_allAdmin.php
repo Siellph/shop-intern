@@ -29,7 +29,7 @@
                 <td class="align-middle"><?= $user['sex'] ?></td>
                 <td class="align-middle"><?= $user['phone'] ?></td>
                 <td class="align-middle"><?= $user['e-mail'] ?></td>
-                <td class="align-middle"><a class="btn btn-danger" href="index.php?c=user&act=delete&id=<?= $user["id_user"] ?>">Удалить</a></td>
+                <td class="align-middle"><a class="btn btn-outline-danger material-icons" title="Удалить" href="index.php?c=user&act=delete&id=<?= $user["id_user"] ?>">delete</a></td>
             </tr>
             <?php
         }

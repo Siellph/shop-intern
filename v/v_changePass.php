@@ -16,7 +16,7 @@
 
     </div>
     <div class="d-flex justify-content-end ml-3 mr-3">
-        <input type="submit" name="button" class="btn btn-success form-control mt-3 mb-3 col-3" value="Сохранить">
+        <input type="submit" name="button" class="btn btn-outline-success material-icons form-control mt-3 mb-3 col-3" value="save" title="Сохранить">
     </div>
 
 </form>

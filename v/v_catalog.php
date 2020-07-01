@@ -6,7 +6,7 @@
 <?php
 if (isset($catalog)) {
 foreach ($catalog as $product) { ?>
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-3">
     <a class="text-primary text-center text-decoration-none" href="index.php?c=page&act=product&id=<?= $product["id_product"] ?>">
         <h3><?= $product["title"] ?></h3>
     </a>
@@ -16,14 +16,12 @@ foreach ($catalog as $product) { ?>
     <p class="text-secondary mb-0">Категория: <?= $product["name_category"] ?></p>
     <p class="text-secondary mb-0"><small>Количество: <?= $product["count"] ?></small></p>
     <p class="text-secondary
-    <?php if ($product['name_status'] == 'Продается') { ?>
+    <?php if ($product['name_status'] == 'Активен') { ?>
         text-success
-        <?php } else if ($product['name_status'] == 'Не продается') { ?>
+        <?php } else if ($product['name_status'] == 'Неактивен') { ?>
         text-danger
-        <?php } else if ($product['name_status'] == 'В пути') { ?>
-        text-primary
         <?php } else { ?>
-        text-warning
+        text-primary
         <?php } ?>
         ">
         <small>
@@ -34,10 +32,10 @@ foreach ($catalog as $product) { ?>
     <?php
     if ($_SESSION['id_role'] == 2) {
         ?>
-        <div class="d-flex justify-content-between flex-wrap">
-            <a class="btn btn-primary mt-2" href="index.php?c=page&act=edit&id=<?= $product["id_product"] ?>">Редактировать</a>
-            <a class="btn btn-info mt-2" href="index.php?c=page&act=edit&id=<?= $product["id_product"] ?>&step=copy">Копировать</a>
-            <a class="btn btn-danger mt-2" href="index.php?c=page&act=delete&id=<?= $product["id_product"] ?>">Удалить</a>
+        <div class="d-flex justify-content-around flex-wrap">
+            <a class="btn btn-outline-primary material-icons" title="Редактировать" href="index.php?c=page&act=edit&id=<?= $product["id_product"] ?>">edit</a>
+            <a class="btn btn-outline-info material-icons" title="Копировать" href="index.php?c=page&act=edit&id=<?= $product["id_product"] ?>&step=copy">content_copy</a>
+            <a class="btn btn-outline-danger material-icons" title="Удалить" href="index.php?c=page&act=delete&id=<?= $product["id_product"] ?>">delete</a>
         </div>
         <?php
     }

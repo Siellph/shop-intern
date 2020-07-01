@@ -9,5 +9,5 @@
 	    <input type="password" class="form-control" name="password" id="exampleInputPassword1" required>
     </div>
 
-	<input class="btn btn-success" type="submit" name="button" value="Войти">
+	<input class="btn btn-outline-success material-icons" type="submit" name="button" value="login" title="Войти">
 </form>

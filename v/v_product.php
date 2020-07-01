@@ -10,14 +10,10 @@
     <p class="text-secondary mb-0">Категория: <?= $product["name_category"] ?></p>
     <p class="text-secondary">Количество: <?= $product["count"] ?></p>
     <p class="text-secondary
-    <?php if ($product['name_status'] == 'Продается') { ?>
+    <?php if ($product['name_status'] == 'Активен') { ?>
         text-success
-        <?php } else if ($product['name_status'] == 'Не продается') { ?>
-        text-danger
-        <?php } else if ($product['name_status'] == 'В пути') { ?>
-        text-primary
         <?php } else { ?>
-        text-warning
+        text-danger
         <?php } ?>
         "> 
         <?= $product["name_status"] ?>
@@ -27,8 +23,8 @@
     <?php
     if ($_SESSION['id_role'] == '2') {
     ?>
-    <a class="btn btn-primary" href="index.php?c=page&act=edit&id=<?= $product["id_product"] ?>">Редактировать</a>
-    <a class="btn btn-info" href="index.php?c=page&act=edit&id=<?= $product["id_product"] ?>&step=copy">Копировать</a>
-    <a class="btn btn-danger" href="index.php?c=page&act=delete&id=<?= $product["id_product"] ?>">Удалить</a>
+    <a class="btn btn-outline-primary material-icons" title="Редактировать" href="index.php?c=page&act=edit&id=<?= $product["id_product"] ?>">edit</a>
+    <a class="btn btn-outline-info material-icons" title="Копировать" href="index.php?c=page&act=edit&id=<?= $product["id_product"] ?>&step=copy">content_copy</a>
+    <a class="btn btn-outline-danger material-icons" title="Удалить" href="index.php?c=page&act=delete&id=<?= $product["id_product"] ?>">delete</a>
     <?php } ?>
 </div>
