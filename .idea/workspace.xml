@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4b4de8d6-8673-41df-b81f-9cb4a13a1e49" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/v/v_addAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/v/v_addAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v/v_addEditProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/v/v_addEditProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v/v_allAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/v/v_allAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v/v_catalog.php" beforeDir="false" afterPath="$PROJECT_DIR$/v/v_catalog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v/v_changePass.php" beforeDir="false" afterPath="$PROJECT_DIR$/v/v_changePass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v/v_main.php" beforeDir="false" afterPath="$PROJECT_DIR$/v/v_main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v/v_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/v/v_product.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,11 +74,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/v/v_addEditProduct.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="95" column="152" selection-start-line="95" selection-start-column="152" selection-end-line="95" selection-end-column="152" />
+            <state relative-caret-position="495">
+              <caret line="296" column="121" selection-start-line="296" selection-start-column="121" selection-end-line="296" selection-end-column="121" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/v/v_login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="112" selection-start-line="11" selection-start-column="112" selection-end-line="11" selection-end-column="112" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/v/v_addAdmin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="514">
+              <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/v/v_allAdmin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="104" selection-start-line="31" selection-start-column="104" selection-end-line="31" selection-end-column="104" />
             </state>
           </provider>
         </entry>
@@ -118,7 +139,6 @@
         <option value="$PROJECT_DIR$/c/C_Admin.php" />
         <option value="$PROJECT_DIR$/config/db.php" />
         <option value="$PROJECT_DIR$/c/C_Base.php" />
-        <option value="$PROJECT_DIR$/v/v_login.php" />
         <option value="$PROJECT_DIR$/v/v_index.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/v/v_addProduct.php" />
@@ -132,9 +152,10 @@
         <option value="$PROJECT_DIR$/v/v_catalog.php" />
         <option value="$PROJECT_DIR$/v/v_main.php" />
         <option value="$PROJECT_DIR$/v/v_allAdmin.php" />
-        <option value="$PROJECT_DIR$/v/v_addAdmin.php" />
         <option value="$PROJECT_DIR$/v/v_changePass.php" />
+        <option value="$PROJECT_DIR$/v/v_login.php" />
         <option value="$PROJECT_DIR$/v/v_addEditProduct.php" />
+        <option value="$PROJECT_DIR$/v/v_addAdmin.php" />
       </list>
     </option>
   </component>
@@ -233,12 +254,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1593116056235</updated>
-      <workItem from="1593116057680" duration="113281000" />
+      <workItem from="1593116057680" duration="113878000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113281000" />
+    <option name="totallyTimeSpent" value="113878000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -423,13 +444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/v/v_login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="72" lean-forward="true" selection-start-line="11" selection-start-column="72" selection-end-line="11" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/m/Basket.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -493,13 +507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/v/v_allAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="104" selection-start-line="31" selection-start-column="104" selection-end-line="31" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/v/v_product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -524,13 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/v/v_addAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="65" column="101" lean-forward="true" selection-start-line="65" selection-start-column="101" selection-end-line="65" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/v/v_changePass.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -545,10 +545,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/v/v_allAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="104" selection-start-line="31" selection-start-column="104" selection-end-line="31" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/v/v_addEditProduct.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="95" column="152" selection-start-line="95" selection-start-column="152" selection-end-line="95" selection-end-column="152" />
+        <state relative-caret-position="495">
+          <caret line="296" column="121" selection-start-line="296" selection-start-column="121" selection-end-line="296" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v/v_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="112" selection-start-line="11" selection-start-column="112" selection-end-line="11" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v/v_addAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
         </state>
       </provider>
     </entry>

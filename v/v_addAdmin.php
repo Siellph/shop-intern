@@ -60,10 +60,10 @@
             <small id="InputEmail" class="form-text text-muted">Укажите электронную почту</small>
         </div>
 
+        <div class="col-md-6 mx-auto my-auto">
+            <input type="hidden" name="id_role" value="2">
+            <input type="submit" name="button" class="btn btn-outline-success material-icons form-control mt-3 mb-3 col-3" value="save" title="Сохранить">
+        </div>
+    </div>
 
-    <div class="col-md-3 mx-auto my-auto">
-        <input type="hidden" name="id_role" value="2">
-        <input type="submit" name="button" class="btn btn-outline-success material-icons form-control" title="Сохранить" value="save">
-    </div>
-    </div>
 </form>
