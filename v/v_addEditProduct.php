@@ -4,7 +4,7 @@ if ($product['id_product'] AND $_GET['step'] == 'copy') {
 
     ?>
 
-    <form action="index.php?c=page&act=copy" method="post" id="form">
+    <form action="index.php?c=page&act=copy_save" method="post" id="form">
         <div class="form-row ml-3 mr-3">
 
             <div class="col-md-6">
@@ -91,9 +91,18 @@ if ($product['id_product'] AND $_GET['step'] == 'copy') {
                 <small id="InputFileProd" class="form-text text-muted">Прикрепите изображения к карточке товара</small>
             </div>
 
+            <div class="d-flex jusctify-content-around flex-wrap text-center col-md-6">
+                <?php
+                foreach ($img as $img) {
+                ?>
+                    <input type="hidden" name="image" value="<?= $img['name_image'] ?>">
+                    <img src="public/img/<?= $img['name_image'] ?>" style="width: 100px;" class="mx-1 my-1 rounded img-thumbnail" alt="<?= $img['name_image'] ?>" multiple>
+                <?php } ?>
+            </div>
+
+        <div class="d-flex justify-content-end col-md-6">
+            <input type="submit" name="button" class="btn btn-outline-success material-icons form-control my-auto mx-auto col-2" value="save" title="Сохранить">
         </div>
-        <div class="d-flex justify-content-end ml-3 mr-3">
-            <input type="submit" name="button" class="btn btn-outline-success material-icons form-control mt-3 mb-3 col-2" value="save" title="Сохранить">
         </div>
 
     </form>
@@ -104,7 +113,7 @@ if ($product['id_product'] AND $_GET['step'] == 'copy') {
 
     ?>
 
-    <form action="index.php?c=page&act=save" method="post" id="form">
+    <form action="index.php?c=page&act=save_edit" method="post" id="form">
         <div class="form-row ml-3 mr-3">
 
             <div class="col-md-6">
@@ -187,7 +196,7 @@ if ($product['id_product'] AND $_GET['step'] == 'copy') {
             </div>
             <div class="col-md-6">
                 <label for="InputFileProd">Выберите файл...</label>
-                <input type="file" name="image" class="form-control-file" id="InputFileProd">
+                <input type="file" name="files[]" class="form-control-file" id="InputFileProd" multiple>
                 <small id="InputFileProd" class="form-text text-muted">Прикрепите изображения к карточке товара</small>
             </div>
 
@@ -205,7 +214,7 @@ if ($product['id_product'] AND $_GET['step'] == 'copy') {
 
     ?>
 
-    <form action="index.php?c=page&act=save" method="post" id="form">
+    <form action="index.php?c=page&act=copy_save" method="post" enctype="multipart/form-data" id="form">
         <div class="form-row ml-3 mr-3">
 
             <div class="col-md-6">
@@ -287,14 +296,19 @@ if ($product['id_product'] AND $_GET['step'] == 'copy') {
                 <small id="InputStatusProd" class="form-text text-muted">Укажите статус товара</small>
             </div>
             <div class="col-md-6">
-                <label for="InputFileProd">Выберите файл...</label>
-                <input type="file" name="image" class="form-control-file" id="InputFileProd">
-                <small id="InputFileProd" class="form-text text-muted">Прикрепите изображения к карточке товара</small>
+                <label for="id_files">Выберите файл...</label>
+                <input id="id_files" multiple="multiple" name="files[]" type="file" class="form-control-file">
+                <small id="id_files" class="form-text text-muted">Прикрепите изображения к карточке товара</small>
             </div>
 
-        </div>
-        <div class="d-flex justify-content-end ml-3 mr-3">
-            <input type="submit" name="button" class="btn btn-outline-success material-icons form-control mt-3 mb-3 col-2" value="save" title="Сохранить">
+            <div id="preview" class="d-flex justify-content-end col-md-6">
+                <img id="preview">
+            </div>
+
+            <div class="d-flex justify-content-end col-md-6">
+                <input type="submit" name="button" class="btn btn-outline-success material-icons form-control my-auto mx-auto col-2" value="save" title="Сохранить">
+            </div>
+
         </div>
 
     </form>

@@ -49,12 +49,28 @@ class SQL {
         }
     }
 
+    public function NewIdProduct() {
+
+        $query = "SELECT MAX(id_product) AS id_product FROM goods";
+
+        $q = $this->db->prepare($query);
+        $q -> execute();
+
+        if ($q->errorCode() != PDO::ERR_NONE) {
+            $info = $q->errorInfo();
+            die($info[2]);
+        }
+        return $q->fetchAll();
+    }
+
     public function SelectGoods() {
 
-        $query = "SELECT `id_product`, `title`, `descript`, `name_category`, `brand_name`, `count`, `price`, `name_status` FROM `goods`
+        $query = "SELECT goods.id_product, MAX(`title`) AS title, MAX(`descript`) AS descript, MIN(`name_image`) AS name_image, MAX(`name_category`) AS name_category, MAX(`brand_name`) AS brand_name, MAX(`count`) AS `count`, MAX(`price`) AS `price`, `name_status` FROM `goods`
                   INNER JOIN `categories` ON goods.id_category = categories.id_category
                   INNER JOIN `brand` ON goods.id_brand = brand.id_brand
-                  INNER JOIN `status` ON goods.id_status = status.id_status";
+                  INNER JOIN `status` ON goods.id_status = status.id_status
+                  LEFT OUTER JOIN `image` ON goods.id_product = image.id_product
+                  GROUP BY goods.id_product";
 
         $q = $this->db->prepare($query);
         $q->execute();
@@ -86,22 +102,6 @@ class SQL {
         return $q->fetchAll();
 
     }
-
-//    public function InsertProduct($title, $descript, $id_category, $id_brand, $count, $price, $id_status) {
-//
-//        $query = "INSERT INTO `goods` (`title`, `descript`, `id_category`, `id_brand`, `count`, `price`, `id_status`)
-//                  VALUES ('" . $title . "', '" . $descript . "', '" . $id_category . "', '" . $id_brand . "', '" . $count . "', '" . $price . "', '" . $id_status . "',)";
-//
-//        $q = $this->db->prepare($query);
-//        $q->execute();
-//
-//        if ($q->errorCode() != PDO::ERR_NONE) {
-//            $info = $q->errorInfo();
-//            die($info[2]);
-//        }
-//        return $q->fetchAll();
-//
-//    }
 
     public function Insert($table, $object) {
 

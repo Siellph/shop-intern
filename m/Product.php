@@ -21,6 +21,11 @@
             return parent::SelectProduct('id_product', $id_product);
         }
 
+        public function getImg($id_product) {
+
+                return parent::Select('image', 'id_product', $id_product, 'true');
+        }
+
         public function getCategory()
         {
 
@@ -71,12 +76,23 @@
                 'id_brand' => $id_brand,
                 'count' => strip_tags($count),
                 'price' => strip_tags($price),
-                'id_status' => $id_status,
+                'id_status' => $id_status
             ];
 
             parent::Insert('goods', $object);
 
-            header('Location: index.php?c=page&act=catalog');
+
+        }
+
+        public function saveImage($inputImg, $id_product) {
+
+            foreach ($inputImg as $name_img) {
+                $object = [
+                    'name_image' => strip_tags($name_img),
+                    'id_product' => (int)$id_product
+                ];
+                parent::Insert('image', $object);
+            }
 
         }
 
@@ -99,9 +115,39 @@
 
         }
 
+        public function RDir( $path ) {
+            // если путь существует и это папка
+            if ( file_exists( $path ) AND is_dir( $path ) ) {
+                // открываем папку
+                $dir = opendir($path);
+                while ( false !== ( $element = readdir( $dir ) ) ) {
+                    // удаляем только содержимое папки
+                    if ( $element != '.' AND $element != '..' )  {
+                        $tmp = $path . '/' . $element;
+                        chmod( $tmp, 0777 );
+                        // если элемент является папкой, то
+                        // удаляем его используя нашу функцию RDir
+                        if ( is_dir( $tmp ) ) {
+                            RDir( $tmp );
+                            // если элемент является файлом, то удаляем файл
+                        } else {
+                            unlink( $tmp );
+                        }
+                    }
+                }
+                // закрываем папку
+                closedir($dir);
+                // удаляем саму папку
+                if ( file_exists( $path ) ) {
+                    rmdir( $path );
+                }
+            }
+        }
+
 		public function DeleteProduct($id_product) {
 
 		    parent::Delete('goods', 'id_product', $id_product);
+		    parent::Delete('image', 'id_product', $id_product);
 
             header('Location: index.php?c=page&act=catalog');
         }
