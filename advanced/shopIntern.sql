@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost:8889
--- Время создания: Июл 03 2020 г., 05:20
+-- Время создания: Июл 09 2020 г., 03:27
 -- Версия сервера: 5.7.26
 -- Версия PHP: 7.4.2
 
@@ -158,30 +158,33 @@ INSERT INTO `status` (`id_status`, `name_status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `users`
+-- Структура таблицы `user`
 --
 
-CREATE TABLE `users` (
-  `id_user` int(11) NOT NULL,
-  `login` varchar(35) NOT NULL,
-  `password` varchar(300) NOT NULL,
-  `firstname` varchar(30) NOT NULL,
-  `lastname` varchar(30) NOT NULL,
-  `midname` varchar(30) NOT NULL,
-  `date_of_birth` date NOT NULL,
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(256) NOT NULL,
+  `password_hash` varchar(256) NOT NULL,
+  `auth_key` varchar(256) NOT NULL,
+  `firstname` varchar(256) NOT NULL,
+  `lastname` varchar(256) NOT NULL,
   `sex` varchar(1) NOT NULL,
-  `phone` varchar(12) NOT NULL,
-  `e-mail` varchar(30) NOT NULL,
+  `phone` varchar(30) NOT NULL,
+  `email` varchar(256) NOT NULL,
+  `verification_token` varchar(256) NOT NULL,
+  `created_at` varchar(256) NOT NULL,
+  `updated_at` varchar(256) NOT NULL,
+  `status` int(11) NOT NULL,
   `id_role` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `users`
+-- Дамп данных таблицы `user`
 --
 
-INSERT INTO `users` (`id_user`, `login`, `password`, `firstname`, `lastname`, `midname`, `date_of_birth`, `sex`, `phone`, `e-mail`, `id_role`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Имя', 'Фамилия', 'Отчество', '1995-12-10', 'М', '89999999999', 'email@email.com', 2),
-(2, 'user', 'ee11cbb19052e40b07aac0ca060c23ee', 'Пользователь', 'Пользователь', 'Пользователь', '1985-06-01', 'М', '89999999999', 'oleg@yandex.ru', 1);
+INSERT INTO `user` (`id`, `username`, `password_hash`, `auth_key`, `firstname`, `lastname`, `sex`, `phone`, `email`, `verification_token`, `created_at`, `updated_at`, `status`, `id_role`) VALUES
+(1, 'admin', '$2y$13$g/CVOjeC9shyXxrRi9UtmechHKOX0uikjLQ0DL5uALYTgXa8vHP7m', 'AD_Lt7Wt-wLgXGSh0a5fx0tBwtiltTsX', 'Vladislav', 'Gordin', 'М', '+7 (996) 323 36 35', 'vl241095@gmail.com', 'qWXSmTUNMjyouJhfcp53VxQg0qopk4uT_1594243238', '1594243238', '1594243238', 10, 2),
+(2, 'VlGor', '$2y$13$csVBn2pYcpykgQFmcSISw.MO6TIsMoRj3RRAOF5.SLUKir44hw2xC', '5z3wzTZE1KX5XrCB2R-FlPqMOW5FYUOL', 'Vladislav', 'Grodin', 'М', '+7 (996) 323 36 35', 'vl241095@yandex.ru', 'Resw-8ypuQr9YAwOlJh94q7OPUaRJCFN_1594245963', '1594245963', '1594245963', 10, 1);
 
 --
 -- Индексы сохранённых таблиц
@@ -228,10 +231,10 @@ ALTER TABLE `status`
   ADD PRIMARY KEY (`id_status`);
 
 --
--- Индексы таблицы `users`
+-- Индексы таблицы `user`
 --
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id_user`),
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`),
   ADD KEY `role` (`id_role`);
 
 --
@@ -275,10 +278,10 @@ ALTER TABLE `status`
   MODIFY `id_status` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT для таблицы `users`
+-- AUTO_INCREMENT для таблицы `user`
 --
-ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
@@ -299,9 +302,9 @@ ALTER TABLE `image`
   ADD CONSTRAINT `image` FOREIGN KEY (`id_product`) REFERENCES `goods` (`id_product`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ограничения внешнего ключа таблицы `users`
+-- Ограничения внешнего ключа таблицы `user`
 --
-ALTER TABLE `users`
+ALTER TABLE `user`
   ADD CONSTRAINT `role` FOREIGN KEY (`id_role`) REFERENCES `roles` (`id_role`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
