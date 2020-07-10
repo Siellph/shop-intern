@@ -1,6 +1,8 @@
 <?php
 namespace backend\controllers;
 
+use backend\models\AddProductForm;
+use backend\models\AddAdminForm;
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -22,7 +24,7 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login', 'error', 'add-product', 'add-admin'],
                         'allow' => true,
                     ],
                     [
@@ -59,6 +61,19 @@ class SiteController extends Controller
         ];
     }
 
+    public function actionAddProduct()
+    {
+        $model = new AddProductForm();
+        if ($model->load(Yii::$app->request->post()) && $model->addProduct()) {
+            Yii::$app->session->setFlash('success', 'Товар успешно добавлен в каталог.');
+            return $this->goHome();
+        }
+
+        return $this->render('add-product', [
+            'model' => $model,
+        ]);
+    }
+
     /**
      * Displays homepage.
      *
@@ -75,6 +90,18 @@ class SiteController extends Controller
      * @return string
      */
 
+    public function actionAddAdmin()
+    {
+        $model = new AddAdminForm();
+        if ($model->load(Yii::$app->request->post()) && $model->addAdmin()) {
+            Yii::$app->session->setFlash('success', 'Новый администратор успешно добавлен!');
+            return $this->goHome();
+        }
+
+        return $this->render('add-admin', [
+            'model' => $model,
+        ]);
+    }
 
     public function actionLogin()
     {
@@ -97,6 +124,7 @@ class SiteController extends Controller
      *
      * @return string
      */
+
     public function actionLogout()
     {
         Yii::$app->user->logout();

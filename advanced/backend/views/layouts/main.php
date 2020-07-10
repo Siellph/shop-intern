@@ -35,12 +35,14 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    $menuItems = [
-        ['label' => 'Каталог', 'url' => ['/site/index']],
-    ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Войти', 'url' => ['/site/login']];
     } else {
+        $menuItems = [
+                ['label' => 'Каталог', 'url' => ['/site/index']],
+                ['label' => 'Добавить товар', 'url' => ['/site/add-product']],
+                ['label' => 'Добавить администратора', 'url' => ['/site/add-admin']],
+            ];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
