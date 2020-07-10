@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost:8889
--- Время создания: Июл 09 2020 г., 03:27
+-- Время создания: Июл 11 2020 г., 01:48
 -- Версия сервера: 5.7.26
 -- Версия PHP: 7.4.2
 
@@ -81,41 +81,21 @@ CREATE TABLE `goods` (
   `id_brand` int(11) NOT NULL,
   `count` int(11) NOT NULL,
   `price` varchar(30) NOT NULL,
-  `id_status` int(11) NOT NULL
+  `id_status` int(11) NOT NULL,
+  `image` varchar(3000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `goods`
 --
 
-INSERT INTO `goods` (`id_product`, `title`, `descript`, `id_category`, `id_brand`, `count`, `price`, `id_status`) VALUES
-(110, 'Product1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam quam sit amet sodales porttitor. Vestibulum gravida facilisis sapien et bibendum. Curabitur vulputate erat vel auctor interdum. Curabitur id diam in est dictum volutpat eu et lectus. Fusce pretium facilisis sem, et tristique arcu dictum non. Maecenas efficitur at risus sit amet aliquet. Maecenas ultricies ultrices convallis. Donec non lorem rhoncus, porta sem at, viverra nisi. Nam eu finibus nulla. Aliquam feugiat odio ac ex sagittis, non tristique nulla sollicitudin. Maecenas nec odio ante. Nunc sagittis ipsum eget odio efficitur, non pharetra massa fermentum. Suspendisse luctus nunc pellentesque nulla porttitor. ', 4, 1, 5, '550', 1),
-(111, 'Product2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam quam sit amet sodales porttitor. Vestibulum gravida facilisis sapien et bibendum. Curabitur vulputate erat vel auctor interdum. Curabitur id diam in est dictum volutpat eu et lectus. Fusce pretium facilisis sem, et tristique arcu dictum non. Maecenas efficitur at risus sit amet aliquet. Maecenas ultricies ultrices convallis. Donec non lorem rhoncus, porta sem at, viverra nisi. Nam eu finibus nulla. Aliquam feugiat odio ac ex sagittis, non tristique nulla sollicitudin. Maecenas nec odio ante. Nunc sagittis ipsum eget odio efficitur, non pharetra massa fermentum. Suspendisse luctus nunc pellentesque nulla porttitor. ', 6, 2, 10, '790', 1),
-(112, 'Product3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam quam sit amet sodales porttitor. Vestibulum gravida facilisis sapien et bibendum. Curabitur vulputate erat vel auctor interdum. Curabitur id diam in est dictum volutpat eu et lectus. Fusce pretium facilisis sem, et tristique arcu dictum non. Maecenas efficitur at risus sit amet aliquet. Maecenas ultricies ultrices convallis. Donec non lorem rhoncus, porta sem at, viverra nisi. Nam eu finibus nulla. Aliquam feugiat odio ac ex sagittis, non tristique nulla sollicitudin. Maecenas nec odio ante. Nunc sagittis ipsum eget odio efficitur, non pharetra massa fermentum. Suspendisse luctus nunc pellentesque nulla porttitor. ', 6, 3, 5, '990', 1);
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `image`
---
-
-CREATE TABLE `image` (
-  `id_image` int(11) NOT NULL,
-  `name_image` varchar(300) NOT NULL,
-  `id_product` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `image`
---
-
-INSERT INTO `image` (`id_image`, `name_image`, `id_product`) VALUES
-(47, '1015977681.jpg', 110),
-(48, 'S17-14091_617_10.jpg', 110),
-(49, '1.jpg', 111),
-(50, '2.jpg', 111),
-(51, '3.jpg', 112),
-(52, '4.jpg', 112);
+INSERT INTO `goods` (`id_product`, `title`, `descript`, `id_category`, `id_brand`, `count`, `price`, `id_status`, `image`) VALUES
+(110, 'Product1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam quam sit amet sodales porttitor. Vestibulum gravida facilisis sapien et bibendum. Curabitur vulputate erat vel auctor interdum. Curabitur id diam in est dictum volutpat eu et lectus. Fusce pretium facilisis sem, et tristique arcu dictum non. Maecenas efficitur at risus sit amet aliquet. Maecenas ultricies ultrices convallis. Donec non lorem rhoncus, porta sem at, viverra nisi. Nam eu finibus nulla. Aliquam feugiat odio ac ex sagittis, non tristique nulla sollicitudin. Maecenas nec odio ante. Nunc sagittis ipsum eget odio efficitur, non pharetra massa fermentum. Suspendisse luctus nunc pellentesque nulla porttitor. ', 4, 1, 5, '550', 1, ''),
+(111, 'Product2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam quam sit amet sodales porttitor. Vestibulum gravida facilisis sapien et bibendum. Curabitur vulputate erat vel auctor interdum. Curabitur id diam in est dictum volutpat eu et lectus. Fusce pretium facilisis sem, et tristique arcu dictum non. Maecenas efficitur at risus sit amet aliquet. Maecenas ultricies ultrices convallis. Donec non lorem rhoncus, porta sem at, viverra nisi. Nam eu finibus nulla. Aliquam feugiat odio ac ex sagittis, non tristique nulla sollicitudin. Maecenas nec odio ante. Nunc sagittis ipsum eget odio efficitur, non pharetra massa fermentum. Suspendisse luctus nunc pellentesque nulla porttitor. ', 6, 2, 10, '790', 1, ''),
+(112, 'Product3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam quam sit amet sodales porttitor. Vestibulum gravida facilisis sapien et bibendum. Curabitur vulputate erat vel auctor interdum. Curabitur id diam in est dictum volutpat eu et lectus. Fusce pretium facilisis sem, et tristique arcu dictum non. Maecenas efficitur at risus sit amet aliquet. Maecenas ultricies ultrices convallis. Donec non lorem rhoncus, porta sem at, viverra nisi. Nam eu finibus nulla. Aliquam feugiat odio ac ex sagittis, non tristique nulla sollicitudin. Maecenas nec odio ante. Nunc sagittis ipsum eget odio efficitur, non pharetra massa fermentum. Suspendisse luctus nunc pellentesque nulla porttitor. ', 6, 3, 5, '990', 1, ''),
+(113, 'Тестовый товар', 'Здесь будет описание товара.', 1, 1, 1, '1990', 1, ''),
+(114, 'Тестовый товар 2', 'Описание к тестовому товару 2', 1, 3, 12, '1900', 2, NULL),
+(115, 'Тестовый товар 3', 'И снова описание тестового товара', 5, 3, 10, '1890', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -184,7 +164,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `password_hash`, `auth_key`, `firstname`, `lastname`, `sex`, `phone`, `email`, `verification_token`, `created_at`, `updated_at`, `status`, `id_role`) VALUES
 (1, 'admin', '$2y$13$g/CVOjeC9shyXxrRi9UtmechHKOX0uikjLQ0DL5uALYTgXa8vHP7m', 'AD_Lt7Wt-wLgXGSh0a5fx0tBwtiltTsX', 'Vladislav', 'Gordin', 'М', '+7 (996) 323 36 35', 'vl241095@gmail.com', 'qWXSmTUNMjyouJhfcp53VxQg0qopk4uT_1594243238', '1594243238', '1594243238', 10, 2),
-(2, 'VlGor', '$2y$13$csVBn2pYcpykgQFmcSISw.MO6TIsMoRj3RRAOF5.SLUKir44hw2xC', '5z3wzTZE1KX5XrCB2R-FlPqMOW5FYUOL', 'Vladislav', 'Grodin', 'М', '+7 (996) 323 36 35', 'vl241095@yandex.ru', 'Resw-8ypuQr9YAwOlJh94q7OPUaRJCFN_1594245963', '1594245963', '1594245963', 10, 1);
+(2, 'VlGor', '$2y$13$csVBn2pYcpykgQFmcSISw.MO6TIsMoRj3RRAOF5.SLUKir44hw2xC', '5z3wzTZE1KX5XrCB2R-FlPqMOW5FYUOL', 'Vladislav', 'Grodin', 'М', '+7 (996) 323 36 35', 'vl241095@yandex.ru', 'Resw-8ypuQr9YAwOlJh94q7OPUaRJCFN_1594245963', '1594245963', '1594245963', 10, 1),
+(3, 'admin2', '$2y$13$y6rjf8jvt8Y9LdNdB0gUPuSscudcuH45LrKXey1PW0Ux31FGTUoiO', 'IU4kZVMtTObxCVfnYk8P2D2lvvGAd-QY', 'Admin', 'V2', 'М', '+7 (999) 999 99 99', 'Admin@admin.ru', '9rdPnkUIwTG7ZUE5M6W8lsW6ab6EtmLA_1594413636', '1594413636', '1594413636', 10, 2);
 
 --
 -- Индексы сохранённых таблиц
@@ -210,13 +191,6 @@ ALTER TABLE `goods`
   ADD KEY `id_status` (`id_status`),
   ADD KEY `id_brand` (`id_brand`),
   ADD KEY `id_category` (`id_category`);
-
---
--- Индексы таблицы `image`
---
-ALTER TABLE `image`
-  ADD PRIMARY KEY (`id_image`),
-  ADD KEY `image` (`id_product`);
 
 --
 -- Индексы таблицы `roles`
@@ -257,13 +231,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT для таблицы `goods`
 --
 ALTER TABLE `goods`
-  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
-
---
--- AUTO_INCREMENT для таблицы `image`
---
-ALTER TABLE `image`
-  MODIFY `id_image` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
 
 --
 -- AUTO_INCREMENT для таблицы `roles`
@@ -281,7 +249,7 @@ ALTER TABLE `status`
 -- AUTO_INCREMENT для таблицы `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
@@ -294,12 +262,6 @@ ALTER TABLE `goods`
   ADD CONSTRAINT `brand` FOREIGN KEY (`id_brand`) REFERENCES `brand` (`id_brand`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `category` FOREIGN KEY (`id_category`) REFERENCES `categories` (`id_category`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `status` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Ограничения внешнего ключа таблицы `image`
---
-ALTER TABLE `image`
-  ADD CONSTRAINT `image` FOREIGN KEY (`id_product`) REFERENCES `goods` (`id_product`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `user`
