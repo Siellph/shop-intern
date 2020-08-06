@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b4de8d6-8673-41df-b81f-9cb4a13a1e49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/advanced/backend/models/AddProductForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/advanced/backend/models/Brand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/advanced/backend/models/Product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/advanced/backend/models/Status.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/advanced/backend/views/site/add-admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/advanced/backend/views/site/add-product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shop(intern).iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shop(intern).iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/advanced/backend/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/advanced/backend/controllers/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/advanced/backend/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/advanced/backend/views/layouts/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/advanced/backend/views/site/addAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/advanced/backend/models/AddAdminForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/advanced/backend/views/site/addProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/advanced/backend/models/Category.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +17,7 @@
     </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -73,7 +61,6 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/advanced/common/config/main-local.php" />
         <option value="$PROJECT_DIR$/advanced/common/models/User.php" />
-        <option value="$PROJECT_DIR$/advanced/backend/views/site/index.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/views/site/index.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/views/site/resetPassword.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/models/PasswordResetRequestForm.php" />
@@ -102,6 +89,7 @@
         <option value="$PROJECT_DIR$/advanced/backend/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/advanced/backend/views/site/add-admin.php" />
         <option value="$PROJECT_DIR$/advanced/backend/models/AddAdminForm.php" />
+        <option value="$PROJECT_DIR$/advanced/backend/views/site/index.php" />
       </list>
     </option>
   </component>
@@ -120,65 +108,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="shop(intern)" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop(intern)" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop(intern)" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop(intern)" type="462c0819:PsiDirectoryNode" />
-              <item name="advanced" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop(intern)" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop(intern)" type="462c0819:PsiDirectoryNode" />
-              <item name="advanced" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop(intern)" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop(intern)" type="462c0819:PsiDirectoryNode" />
-              <item name="advanced" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop(intern)" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop(intern)" type="462c0819:PsiDirectoryNode" />
-              <item name="advanced" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop(intern)" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop(intern)" type="462c0819:PsiDirectoryNode" />
-              <item name="advanced" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop(intern)" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop(intern)" type="462c0819:PsiDirectoryNode" />
-              <item name="advanced" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop(intern)" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop(intern)" type="462c0819:PsiDirectoryNode" />
-              <item name="advanced" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -232,12 +162,14 @@
       <workItem from="1593964235898" duration="8851000" />
       <workItem from="1594064409013" duration="125000" />
       <workItem from="1594228180308" duration="12356000" />
-      <workItem from="1594387650755" duration="14205000" />
+      <workItem from="1594387650755" duration="15231000" />
+      <workItem from="1595083050101" duration="224000" />
+      <workItem from="1596632976923" duration="187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199448000" />
+    <option name="totallyTimeSpent" value="200885000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -252,7 +184,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16074313" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.21890146" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32876712" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
@@ -276,16 +208,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding>
-            <element signature="e#177#213#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/advanced/yii">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -465,13 +387,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/backend/views/site/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/advanced/backend/config/main-local.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -517,16 +432,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/backend/models/UploadForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding>
-            <element signature="e#30#49#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/advanced/backend/models/UploadForm.php" />
     <entry file="file://$PROJECT_DIR$/advanced/common/models/LoginForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-457">
@@ -541,13 +447,6 @@
           <folding>
             <element signature="e#39#87#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/backend/models/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -637,6 +536,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/advanced/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/advanced/backend/models/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v/v_catalog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/advanced/backend/views/site/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
